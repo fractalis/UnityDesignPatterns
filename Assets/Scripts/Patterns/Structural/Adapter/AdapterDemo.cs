@@ -9,7 +9,7 @@ public class AdapterDemo : MonoBehaviour
         CraftableItem craftedSword = new CraftableItem("Sword");
         EnchantCraftableAdapter ecAdapter = new EnchantCraftableAdapter(craftedSword);
 
-        var enchantedCraftedSword = ecAdapter.Enchant();
+        EnchantableItem enchantedCraftedSword = ecAdapter.Enchant() as EnchantableItem;
 
         Debug.Log(enchantedCraftedSword.ItemName);
     }
